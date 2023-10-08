@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Encryption</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>File Encryption and Decryption</h1>
+    
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" accept=".jpg, .pdf, .txt, .png" />
+            <button type="submit">Upload and Process</button>
+        </form>
+        <br>
+
+        <div class="result">
+            <div class="original">
+                <h2>Original File</h2>
+                <p>{{ original_text }}</p>
+            </div>
+            
+            <div class="encrypted">
+                <h2>Encrypted File</h2>
+                <p>{{ encrypted_text }}</p>
+            </div>
+            
+            <div class="decrypted">
+                <h2>Decrypted File</h2>
+                <p>{{ decrypted_text }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
